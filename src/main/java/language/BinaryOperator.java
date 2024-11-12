@@ -30,7 +30,7 @@ public abstract class BinaryOperator<T> implements Operator<T> {
         if (operand == null) {
             throw new NullPointerException("Could not set null operand.");
         }
-        if (i > 1) {
+        if (i > 1 || i < 0) {
             throw new IllegalArgumentException("Binary operator only accepts operands 0 and 1 "
                     + "but received " + i + ".");
         }
